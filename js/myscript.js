@@ -1,18 +1,19 @@
-let today = new Date();
+let today = setInterval(myDate,1000)
+console.log(today)
 let isWeekend= today.getDay()
 today=(today[Symbol.toPrimitive]('number'));
 
-let date1 = new Date('26 May 2023 09:30');
-date1=(date1[Symbol.toPrimitive]('number'));
+let date0 = new Date('26 May 2023 09:30');
+date1=(date0[Symbol.toPrimitive]('number'));
 
 let gap;
 
- gap = date1 - today;
+ gap = date0 - today;
 console.log(gap)
 
 if((gap == 0)&&(isWeekend<5)){
     gap = 86400000
-}else if((gap == 0)&&(isWeekend>5)){
+}else if((gap == 0)&&(isWeekend>=5)){
     gap = 86400000*2
 }
 
