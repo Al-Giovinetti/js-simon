@@ -18,6 +18,7 @@ main > div{
     margin: auto;
     height: 300px;
     width: 500px;
+    border-radius: 15px;
 }
 
 div > h1{

@@ -1,16 +1,19 @@
 let today = new Date();
+let isWeekend= today.getDay()
 today=(today[Symbol.toPrimitive]('number'));
 
 let date1 = new Date('26 May 2023 09:30');
 date1=(date1[Symbol.toPrimitive]('number'));
 
-let gap
+let gap;
 
  gap = date1 - today;
 console.log(gap)
 
-if(gap == 0){
+if((gap == 0)&&(isWeekend<5)){
     gap = 86400000
+}else if((gap == 0)&&(isWeekend>5)){
+    gap = 86400000*2
 }
 
 let myDays = document.getElementById("days")
@@ -35,9 +38,11 @@ myHours.innerHTML = appHours
 myMinuts.innerHTML = appMinuts
 mySeconds.innerHTML = appSeconds
 
+const clock = setInterval(myDate,1000)
+
 
 function myDate(){
-    const date = new Data()
+    let date = new Date()
     return date
 }
 
