@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+main{
+    background-color: blueviolet;
+    height: 100vh;
+}
+
+main > div{
+    background-color: crimson;
+    margin: auto;
+    height: 300px;
+    width: 500px;
+}
+
+div > h1{
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+div.container{
+    height: 50%;
+    padding: 0 2rem;
+}
+
+div.contain{
+    border: 1px solid white;
+    width: calc(100% / 4);
+    text-align: center;
+    height: 100%;
+}
+
+.contain > p{
+    height: 80%;
+}
